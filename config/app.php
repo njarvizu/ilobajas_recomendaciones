@@ -157,6 +157,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         duxet\Rethinkdb\RethinkdbServiceProvider::class,
 
+        duxet\Rethinkdb\RethinkdbServiceProvider::class,
+
     ],
 
     /*
