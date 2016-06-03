@@ -27,7 +27,9 @@
                           <div class="panel-footer">
                             <a class="btn btn-danger" href="http://youtube.com/watch?v={{ $movie->yt_trailer_code }}" target="_blank"><i class="fa fa-youtube"></i></a>
                             <div class="Movie--rating">
-                                <a href="{{ url('movies/rate/'.$movie->id.'/8') }}"><i style="color:yellow" class="fa fa-star"></i></a>
+                                @if (!count($movie->ratings))
+                                    <a href="{{ url('movies/rate/'.$movie->id.'/8') }}"><i style="color:yellow" class="fa fa-star"></i></a>
+                                @endif
                             </div>
                           </div>
                         </div>

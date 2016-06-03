@@ -14,7 +14,12 @@ class MoviesController extends Controller
 {
     public function show_movies()
     {
-        $movies = Movie::orderBy('id', 'RAND()')->take(3)->get();
+        // return Movie::with('ratings')->get();
+        $movies = Movie::with(['ratings'])
+                                ->orderBy('id', 'RAND()')
+                                ->take(4)
+                                ->get();
+
         return view('movies.show_movies', compact('movies'));
     }
 
