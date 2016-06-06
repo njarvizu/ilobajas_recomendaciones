@@ -21,9 +21,20 @@
                         @{{ descarga.title }}
                     </td>
                     <td>
-                        <a v-show="descarga.downloaded == 0" href="@{{ descarga.hash }}" type="button"
-                           class="btn btn-default">Descargar</a>
-                        <h3 v-show="descarga.downloaded == 1"><span class="label label-success">Descargado</span></h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a v-show="descarga.downloaded == 0" href="/@{{ descarga.hash }}/1" type="button"
+                                   class="btn btn-default">Descargar</a>
+                                <h3 v-show="descarga.downloaded == 1"><span class="label label-info">Descargando</span></h3>
+                                <h3 v-show="descarga.downloaded == 2"><span class="label label-warning">Cancelado</span></h3>
+                            </div>
+                            <div class="col-md-6">
+                                <a v-show="descarga.downloaded == 1" href="/@{{ descarga.hash }}/2" type="button"
+                                   class="btn btn-danger">Cancelar Descarga</a>
+                                <a v-show="descarga.downloaded == 2" href="/@{{ descarga.hash }}/3" type="button"
+                                   class="btn btn-danger">Quitar de la lista</a>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 </tbody>
