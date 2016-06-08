@@ -1,22 +1,17 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-Route::get('/', function () {
-    return view('portada');
+Route::get('/', function() {
+    return view('welcome');
 });
-    Route::get('/{id?}', ['uses' => 'DescargasController@historial_descargas']);
-    Route::get('movies/show_movies', 'MoviesController@show_movies');
-    Route::get('movies/rate/{movie_id}/{rating}', 'MoviesController@rate');
-    Route::get('recommendations/show_recomm', 'RecommendationsController@show_recomm');
-    Route::get('recommendations', function(){ return view('recommendations');});
-  
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('movies/download/{id?}/{action?}', ['uses' => 'DescargasController@historial_descargas']);
+
+Route::get('movies/show_movies', 'MoviesController@show_movies');
+Route::get('movies/rate/{movie_id}/{rating}', 'MoviesController@rate');
+
+Route::get('recommendations/show_recomm', 'RecommendationsController@show_recomm');
+Route::get('recommendations', function(){ return view('recommendations');});

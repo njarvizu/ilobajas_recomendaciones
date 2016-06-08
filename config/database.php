@@ -81,9 +81,9 @@ return [
             'rethinkdb' => [
                 'name' => 'rethinkdb',
                 'driver' => 'rethinkdb',
-                'host' => env('DB_HOST', 'http://tyr.cloud9.mx/'),
-                'port' => env('DB_PORT', 28015),
-                'database' => env('DB_DATABASE', 'downloads'),
+                'host' => 'tyr.cloud9.mx',
+                'port' => 28015,
+                'database' => 'downloads',
             ],
 
         ],

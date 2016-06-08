@@ -6,6 +6,8 @@ use \duxet\Rethinkdb\Eloquent\Model;
 
 class Rating extends Model
 {
+    protected $connection = 'rethinkdb';
+    
     protected $fillable = [
         'title',
         'movie_id',
