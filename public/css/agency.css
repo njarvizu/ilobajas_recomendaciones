@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6{
   }
 
   .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{
-    color:#fff;background-color:#fec503;border-color:#f6bf01
+    color:#fff;background-color:#CB0016;border-color:#CB0016
     }
 
   .btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{background-image:none}
