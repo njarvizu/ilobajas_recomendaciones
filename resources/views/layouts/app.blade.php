@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                         </li>
-                    @endif
+
                 </ul>
             </div>
         </div>
