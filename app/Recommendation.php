@@ -7,4 +7,5 @@ use \duxet\Rethinkdb\Eloquent\Model;
 class Recommendation extends Model
 {
     //
+    protected $connection = "rethinkdb";
 }

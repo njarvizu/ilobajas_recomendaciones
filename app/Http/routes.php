@@ -3,6 +3,9 @@
 Route::get('/', function() {
     return view('portada');
 });
+Route::get('', function() {
+    return view('portada');
+});
 
 Route::auth();
 
