@@ -6,7 +6,13 @@
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 
+$(document).ready(function(){
+  $('.modal-click').on('click', function(){
 
+    var id = $(this).data('id');
+    console.log(id);
+  });
+});
 
 $(function() {
     $('a.page-scroll').bind('click', function(event) {

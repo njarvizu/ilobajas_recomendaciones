@@ -74,7 +74,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-
+@yield('content')
 
     <!-- Services Section
     <section id="services">
@@ -338,7 +338,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                    <span class="copyright">Copyright &copy; Your Website 2016</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
