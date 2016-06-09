@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section ('content')
 
 <!-- Recomendacion Grid Section -->
@@ -29,9 +28,9 @@
                     <h4 >{{ $pelicula->title }}</h4>
                     <br>
                     <p class="text-muted">  </p>
-                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="glyphicon glyphicon-circle-arrow-down"></i> Descarga {{ $pelicula->calidad_alta }}</button>
+                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-plus"></i> Añadir {{ $pelicula->calidad_alta }}</button>
                       <br><br>
-                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="glyphicon glyphicon-circle-arrow-down"></i> Descarga {{ $pelicula->calidad_baja }}</button>
+                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-plus"></i> Añadir {{ $pelicula->calidad_baja }}</button>
                 </div>
             </div>
               @endforeach
@@ -39,7 +38,7 @@
 
 
 
-                      <!-- Recomendaciones Modals -->
+                      <!-- Recomendaciones Modal -->
 
                       <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
                           <div class="modal-content">
@@ -61,7 +60,7 @@
                                               <ul class="list-inline">
                                                   <li id="calidades"></li>
                                               </ul>
-                                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="glyphicon glyphicon-circle-arrow-left"></i> volver</button>
+                                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="glyphicon glyphicon-circle-arrow-left"></i> Volver</button>
                                           </div>
                                       </div>
                                   </div>
