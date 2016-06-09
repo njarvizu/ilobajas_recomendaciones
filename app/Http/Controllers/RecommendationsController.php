@@ -13,9 +13,8 @@ class RecommendationsController extends Controller {
 
 
 
-    public function show_recomm(){
+    public function show(){
 
-    //  $peliculas = App\Recommendation::
     $peliculas = Recommendation::take(3)->get();
 
      return view('Recommendations.recommendations', compact('peliculas'));
