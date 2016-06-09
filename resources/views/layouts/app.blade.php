@@ -12,10 +12,10 @@
     <title>iLoBajas</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+    <link href="{{ asset('css/agency.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -60,25 +60,25 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Recomendaciones</a>
+                        <a class="page-scroll" href="#portfolio">No hace nada</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#listado">Listado</a>
+                        <a class="page-scroll" href="#listado">No hace nada</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href="#team">No hace nada</a>
                     </li>
                     <!-- <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li> -->
                     @if (Auth::guest())
-                    <li><a class="page-scroll" href="{{ url('/register') }}">Register</a></li>
+                    <li><a class="page-scroll" href="{{ url('/register') }}">Registrarse</a></li>
                     @else
                     <li class="page-scroll">
                         <a href="#"class="page-scroll">{{ Auth::user()->name }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="{{ url('/logout') }}"><i class="fa fa-power-off"></i>Logout</a>
+                        <a class="page-scroll" href="{{ url('/logout') }}"><i class="fa fa-power-off"></i>Salir</a>
                     </li>
                     @endif
 
@@ -121,22 +121,22 @@
 
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="{{ asset('js/jquery.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
 <!-- Plugin JavaScript -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/cbpAnimatedHeader.js"></script>
+<script src="{{ asset('js/classie.js') }}"></script>
+<script src="{{ asset('js/cbpAnimatedHeader.js') }}"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+<script src="{{ asset('js/jqBootstrapValidation.js') }}"></script>
+<script src="{{ asset('js/contact_me.js') }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/agency.js"></script>
+<script src="{{ asset('js/agency.js') }}"></script>
 
 </body>
 
