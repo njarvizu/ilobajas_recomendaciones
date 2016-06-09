@@ -23,14 +23,15 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="{{ $pelicula->image }}" class="img-responsive img-centered" alt="">
+                    <img src="{{ $pelicula->image }}" class="img-responsive img-centered modal-click" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>{{ $pelicula->title }}</h4>
-                    <p class="text-muted"> {{ $pelicula->date }} </p>
-                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-times"></i>Descarga {{ $pelicula->calidad_alta }}</button>
+                    <h4 class="modal-click">{{ $pelicula->title }}</h4>
+                    <br>
+                    <p class="text-muted modal-click">  </p>
+                    <button type="button" class="btn btn-primary modal-click" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-times"></i>Descarga {{ $pelicula->calidad_alta }}</button>
                       <br><br>
-                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-times"></i>Descarga {{ $pelicula->calidad_baja }}</button>
+                    <button type="button" class="btn btn-primary modal-click" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-times"></i>Descarga {{ $pelicula->calidad_baja }}</button>
                 </div>
             </div>
 
@@ -59,17 +60,16 @@
                                       <div class="col-lg-8 col-lg-offset-2">
                                           <div class="modal-body">
                                               <!-- Project Details Go Here -->
-                                              <h2 class="modal-titulo"></h2>
-                                              <p class="item-intro text-muted">Genero</p>
-                                              <img src="{{ $pelicula->image }}" class="img-responsive img-centered" alt="">
-                                              <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                              <p>
-                                                  <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                              <h2 class="modal-titulo">{{$pelicula->title}}</h2>
+                                              <p class="item-intro text-muted"></p>
+                                              <img src="{{ $pelicula->image }}" class="img-centered img-medium" alt="">
+                                              <p>{{ $pelicula->descripcion}}</p>
+
                                               <ul class="list-inline">
-                                                  <li>{{ $pelicula->date}}</li>
-                                                  <li>Category: Graphic Design</li>
+
+                                                  <li>Calidad:{{$pelicula->calidad_baja}} | {{$pelicula->calidad_alta}}</li>
                                               </ul>
-                                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>volver</button>
                                           </div>
                                       </div>
                                   </div>
