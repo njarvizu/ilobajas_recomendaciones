@@ -6,7 +6,18 @@
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 
+$(document).ready(function(){
+  $('.modal-click').on('click', function(){
 
+    var pelicula = $(this).data('id');
+    console.log(pelicula);
+    $(".modal-titulo").html(pelicula['title']);
+    $("#img-modal").attr("src",pelicula['image']);
+    $("#descripcion").html(pelicula['descripcion']);
+    $("#calidades").html(pelicula['calidad_alta']+" | "+pelicula['calidad_baja']);
+
+  });
+});
 
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
