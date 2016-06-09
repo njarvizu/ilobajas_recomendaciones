@@ -20,7 +20,7 @@
                 <a href="#portfolioModal" class="portfolio-link modal-click" data-id="{{ $pelicula->id}}" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
+                            <i class="glyphicon glyphicon-eye-open fa-3x"></i>
                         </div>
                     </div>
                     <img src="{{ $pelicula->image }}" class="img-responsive img-centered modal-click" alt="">
@@ -29,18 +29,12 @@
                     <h4 class="modal-click">{{ $pelicula->title }}</h4>
                     <br>
                     <p class="text-muted modal-click">  </p>
-                    <button type="button" class="btn btn-primary modal-click" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-times"></i>Descarga {{ $pelicula->calidad_alta }}</button>
+                    <button type="button" class="btn btn-primary modal-click" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="glyphicon glyphicon-circle-arrow-down"></i> Descarga {{ $pelicula->calidad_alta }}</button>
                       <br><br>
-                    <button type="button" class="btn btn-primary modal-click" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-times"></i>Descarga {{ $pelicula->calidad_baja }}</button>
+                    <button type="button" class="btn btn-primary modal-click" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="glyphicon glyphicon-circle-arrow-down"></i> Descarga {{ $pelicula->calidad_baja }}</button>
                 </div>
             </div>
-
-
-
               @endforeach
-
-
-
           </section>
 
 
@@ -64,12 +58,10 @@
                                               <p class="item-intro text-muted"></p>
                                               <img src="{{ $pelicula->image }}" class="img-centered img-medium" alt="">
                                               <p>{{ $pelicula->descripcion}}</p>
-
                                               <ul class="list-inline">
-
                                                   <li>Calidad:{{$pelicula->calidad_baja}} | {{$pelicula->calidad_alta}}</li>
                                               </ul>
-                                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>volver</button>
+                                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="glyphicon glyphicon-circle-arrow-left"></i> volver</button>
                                           </div>
                                       </div>
                                   </div>

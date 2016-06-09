@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6{
   }
 
   .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{
-    color:#fff;background-color:#CB0016;border-color:#CB0016
+    color:#fff;background-color:#B10013;border-color:#B10013
     }
 
   .btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{background-image:none}
@@ -46,9 +46,9 @@ h1,h2,h3,h4,h5,h6{
   .btn-primary:hover,.btn-primary.disabled:focus,.btn-primary[disabled]:focus,fieldset[disabled]
   .btn-primary:focus,.btn-primary.disabled:active,.btn-primary[disabled]:active,fieldset[disabled]
   .btn-primary:active,.btn-primary.disabled.active,.btn-primary[disabled].active,fieldset[disabled]
-  .btn-primary.active{
-    background-color:#CB0016;
-    border-color:#CB0016
+  .btn-primary.active,.btn-primary:active:focus{
+    background-color:#B10013;
+    border-color:#B10013
     }
 
     .btn-primary .badge{color:#CB0016;background-color:#fff}
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6{
     .navbar-default{background-color:#222;border-color:transparent}
     .navbar-default .navbar-brand{color:#cb0016;font-family:"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive}
     .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default
-    .navbar-brand.active{color:#fec503}
+    .navbar-brand.active{color:#DA0909}
     .navbar-default .navbar-collapse{border-color:rgba(255,255,255,.02)}
     .navbar-default .navbar-toggle{background-color:#CB0016;border-color:#CB0016}
     .navbar-default .navbar-toggle .icon-bar{background-color:#fff}.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{background-color:#CB0016}.navbar-default .nav li a{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:400;letter-spacing:1px;color:#777}
