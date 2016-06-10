@@ -18,14 +18,15 @@
     <link href="{{ asset('css/agency.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+          integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,57 +40,57 @@
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">iLoBajas</a>
-            </div>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">iLoBajas</a>
+        </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">No hace nada</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#listado">No hace nada</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">No hace nada</a>
-                    </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li> -->
-                    @if (Auth::guest())
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{{url('/movies/show_movies')}}">Calificar Peliculas</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{{url('/recommendations/show')}}">Recomendaciones</a>
+                </li>
+                <!-- <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li> -->
+                @if (Auth::guest())
                     <li><a class="page-scroll" href="{{ url('/register') }}">Registrarse</a></li>
-                    @else
+                @else
                     <li class="page-scroll">
-                        <a href="#"class="page-scroll">{{ Auth::user()->name }}</a>
+                        <a href="#" class="page-scroll">{{ Auth::user()->name }}</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="{{ url('/logout') }}"><i class="fa fa-power-off"></i>Salir</a>
                     </li>
-                    @endif
+                @endif
 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            </ul>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
+<div class="container" style="padding-top: 100px">
     @yield('content')
+</div>
 
 <footer>
     <div class="container">
