@@ -61,18 +61,18 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="{{url('/movies/show_movies')}}">Calificar Peliculas</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="{{url('/recommendations/show')}}">Recomendaciones</a>
-                </li>
                 <!-- <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li> -->
                 @if (Auth::guest())
                     <li><a class="page-scroll" href="{{ url('/register') }}">Registrarse</a></li>
                 @else
+                    <li>
+                        <a class="page-scroll" href="{{url('/movies/show_movies')}}">Calificar Peliculas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{url('/recommendations/show')}}">Recomendaciones</a>
+                    </li>
                     <li class="page-scroll">
                         <a href="#" class="page-scroll">{{ Auth::user()->name }}</a>
                     </li>
