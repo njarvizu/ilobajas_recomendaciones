@@ -19,3 +19,5 @@ route::get('movies/add_to_queue/{movie_id}/{hash}', 'MoviesController@addToQueue
 
 Route::get('recommendations/show', 'RecommendationsController@show');
 Route::get('recommendations', function(){ return view('recommendations');});
+
+Route::get('historiales/show', 'HistorialesController@show');
