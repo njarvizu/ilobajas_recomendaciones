@@ -17,6 +17,7 @@ class RecommendationsController extends Controller {
 
     $peliculas = Recommendation::take(3)->get();
 
+//    return $peliculas;
      return view('Recommendations.recommendations', compact('peliculas'));
 
     }

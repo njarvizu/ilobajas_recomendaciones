@@ -28,9 +28,10 @@
                     <h4 >{{ $pelicula->title }}</h4>
                     <br>
                     <p class="text-muted">  </p>
-                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-plus"></i> Añadir {{ $pelicula->calidad_alta }}</button>
+                    <a href="{{ url('movies/add_to_queue/' . $pelicula->movie_id . '/' . $pelicula->urlhash_calidad_alta) }}" type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-plus"></i> Añadir {{ $pelicula->calidad_alta }}</a>
                       <br><br>
-                    <button type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-plus"></i> Añadir {{ $pelicula->calidad_baja }}</button>
+                    <a href="{{ url('movies/add_to_queue/' . $pelicula->movie_id . '/' . $pelicula->urlhash_calidad_baja) }}" type="button" class="btn btn-primary" id="{{ $pelicula->urlhash_calidad_baja}}"><i class="fa fa-plus"></i> Añadir {{ $pelicula->calidad_baja }}</a>
+
                 </div>
             </div>
               @endforeach

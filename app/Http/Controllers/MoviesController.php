@@ -11,6 +11,7 @@ use App\Movie;
 use App\Rating;
 
 use Auth;
+use App\download_queue;
 
 class MoviesController extends Controller
 {
@@ -43,5 +44,34 @@ class MoviesController extends Controller
 
         return back();
 
+    }
+
+    public function addToQueue($movie_id, $hash)
+    {
+        $movie_id = (int)$movie_id;
+        $movie = Movie::find($movie_id);
+
+        /* Checar si ya está en la cola de descargas */
+        if (download_queue::where(['hash' => $hash])->first()) {
+            flash('Ya se encuentra en la cola de descargas', 'warning');
+            return back();
+        }
+        
+        $data = [
+            'downloaded' => 0,
+            'hash' => $hash,
+            'movie_id' => $movie->id,
+            'progreso' => 0,
+            'state' => 'ok',
+            'title' => $movie->title,
+            'user_id' => Auth::user()->id
+        ];
+
+        if (!download_queue::create($data)) {
+            flash('Ocurrió un error, no se ha agregado a la cola de descargas', 'warning');
+        }
+
+        flash('La película' . $movie->title . 'se agregó a la cola de descargas.', 'success');
+        return back();
     }
 }
