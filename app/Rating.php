@@ -16,8 +16,8 @@ class Rating extends Model
         'rating'
     ];
 
-    // public function movie()
-    // {
-    //     return $this->belongsTo('App\Movie');
-    // }
+     public function movie()
+     {
+         return $this->belongsTo('App\Movie');
+     }
 }
