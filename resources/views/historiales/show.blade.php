@@ -19,7 +19,7 @@
                 <div class="portfolio-caption">
                     <h4 >{{$dato->title}}</h4>
                     <br>
-                    <p class="text-muted"> {{$dato->state }}</p>
+                    <p class="text-muted"></p>
 
                 </div>
             </div>
