@@ -10,6 +10,8 @@ use App\Movie;
 
 use App\Rating;
 
+use Auth;
+
 class MoviesController extends Controller
 {
     public function show_movies()
@@ -31,7 +33,7 @@ class MoviesController extends Controller
 
         Rating::create([
             'movie_id' => $movie_id,
-            'user_id' => 1,
+            'user_id' => Auth::user()->id,
             'title' => $movie->title,
             'rating_api' => (int)$movie->rating,
             'rating' => $rating
