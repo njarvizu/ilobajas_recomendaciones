@@ -31,7 +31,12 @@ class MoviesController extends Controller
         $movie_id = (int)$movie_id;
         $rating = (int)$rating;
         $movie = Movie::find($movie_id);
-        $search_rating = Rating::where('movie_id',$movie_id)->where('user_id',Auth::user()->id)->get();
+        $where = [
+            'movie_id' => $movie_id,
+            'user_id' => Auth::user()->id
+
+        ];
+        $search_rating = Rating::where($where)->get();
         if(count($search_rating->toArray()) == 0){
             Rating::create([
                 'movie_id' => $movie_id,

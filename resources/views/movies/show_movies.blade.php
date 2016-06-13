@@ -33,14 +33,15 @@
                         </ul>
                     </div>
                     @else
-                    <input id="stars-{{ $movie->id }}" data-id="{{ $movie->id }}" value="{{ $movie->id }}" name="input-name" type="number" class="rating" data-size="xs" data-rtl="true">
+                    <pre>
+                        {{ $movie->ratings }}
+                    </pre>
+                    <input id="stars-{{ $movie->id }}" data-id="{{ $movie->id }}" value="{{ $movie->ratings }}" name="input-name" type="number" class="rating" data-size="xs" data-rtl="true">
                     @endif
                 </div>
             </div>
         </div>
-        <pre>
-            {{ $movie->ratings }}
-        </pre>
+
         @endforeach
     </div>
     @stop
