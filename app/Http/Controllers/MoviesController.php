@@ -31,14 +31,19 @@ class MoviesController extends Controller
         $movie_id = (int)$movie_id;
         $rating = (int)$rating;
         $movie = Movie::find($movie_id);
+        $search_rating = Rating::where('movie_id',$movie_id)->where('user_id',Auth::user()->id)->get();
+        if(count($search_rating->toArray()) == 0){
+            Rating::create([
+                'movie_id' => $movie_id,
+                'user_id' => Auth::user()->id,
+                'title' => $movie->title,
+                'rating_api' => (int)$movie->rating,
+                'rating' => $rating
+            ]);
+        } else {
+            Rating::where('movie_id',$movie_id)->where('user_id',Auth::user()->id)->update(['rating'=>$rating]);
+        }
 
-        Rating::create([
-            'movie_id' => $movie_id,
-            'user_id' => Auth::user()->id,
-            'title' => $movie->title,
-            'rating_api' => (int)$movie->rating,
-            'rating' => $rating
-        ]);
 
         flash('Se ha calificado su película ' . $movie->title, 'success');
 
@@ -56,7 +61,7 @@ class MoviesController extends Controller
             flash('Ya se encuentra en la cola de descargas', 'warning');
             return back();
         }
-        
+
         $data = [
             'downloaded' => 0,
             'hash' => $hash,

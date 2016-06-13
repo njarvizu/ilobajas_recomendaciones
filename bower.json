@@ -1,0 +1,21 @@
+{
+  "name": "ilobajas_recomendaciones",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Javier Fletes <elfletes@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/njarvizu/ilobajas_recomendaciones",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/plugins/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-star-rating": "^4.0.1"
+  }
+}

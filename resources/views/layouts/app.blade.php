@@ -17,15 +17,19 @@
     <!-- Custom CSS -->
     <link href="{{ asset('css/agency.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/sweetalert2/dist/sweetalert2.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap-star-rating/css/star-rating.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+
+
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
-          integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-          type='text/css'>
+    type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
 
@@ -40,13 +44,13 @@
 
 <body id="page-top" class="index">
 
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -62,30 +66,30 @@
                     <a href="#page-top"></a>
                 </li>
                 <!-- <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li> -->
-                @if (Auth::guest())
-                    <li><a class="page-scroll" href="{{ url('/register') }}">Registrarse</a></li>
-                @else
-                    <li>
-                        <a class="page-scroll" href="{{url('/movies/show_movies')}}">Calificar Peliculas</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="{{url('/recommendations/show')}}">Recomendaciones</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#" class="page-scroll">{{ Auth::user()->name }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="{{ url('/logout') }}"><i class="fa fa-power-off"></i>Salir</a>
-                    </li>
-                @endif
+                <a class="page-scroll" href="#contact">Contact</a>
+            </li> -->
+            @if (Auth::guest())
+            <li><a class="page-scroll" href="{{ url('/register') }}">Registrarse</a></li>
+            @else
+            <li>
+                <a class="page-scroll" href="{{url('/movies/show_movies')}}">Calificar Peliculas</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{url('/recommendations/show')}}">Recomendaciones</a>
+            </li>
+            <li class="page-scroll">
+                <a href="#" class="page-scroll">{{ Auth::user()->name }}</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{ url('/logout') }}"><i class="fa fa-power-off"></i>Salir</a>
+            </li>
+            @endif
 
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+        </ul>
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
 </nav>
 
 <div class="container" style="padding-top: 100px">
@@ -139,6 +143,10 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ asset('js/agency.js') }}"></script>
 <script src="{{ asset('plugins/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+
+<script src="{{ asset('plugins/bootstrap-star-rating/js/star-rating.js') }}" type="text/javascript"></script>
+
+@yield('script')
 @include('layouts.partials.flash')
 
 </body>
