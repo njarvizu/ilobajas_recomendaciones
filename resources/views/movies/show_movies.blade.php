@@ -19,7 +19,7 @@
                     target="_blank"><i class="fa fa-youtube"></i></a>
 
                     @if (!count($movie->ratings))
-                    <div class="btn-group pull-right">
+                    <!-- <div class="btn-group pull-right">
                         <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-star"></i> <span class="caret"></span></button>
@@ -31,12 +31,10 @@
                             @endfor
 
                         </ul>
-                    </div>
+                    </div> -->
+                    <input id="stars-{{ $movie->id }}" data-id="{{ $movie->id }}"  name="input-name" type="number" class="rating" data-size="xs" data-rtl="true">
                     @else
-                    <pre>
-                        {{ $movie->ratings }}
-                    </pre>
-                    <input id="stars-{{ $movie->id }}" data-id="{{ $movie->id }}" value="{{ $movie->ratings }}" name="input-name" type="number" class="rating" data-size="xs" data-rtl="true">
+                    <input id="stars-{{ $movie->id }}" data-id="{{ $movie->id }}" value="{{ $movie->ratings->avg('rating') }}" name="input-name" type="number" class="rating" data-size="xs" data-rtl="true">
                     @endif
                 </div>
             </div>
