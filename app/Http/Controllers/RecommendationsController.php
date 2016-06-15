@@ -14,10 +14,10 @@ class RecommendationsController extends Controller {
 
 
     public function show(){
+        //obtener las peliculas de la fecha actual
+        $fecha_hoy = date('Y-m-d');
+        $peliculas = Recommendation::where('date', $fecha_hoy)->get();//where('date', $fecha_hoy).get();
 
-    $peliculas = Recommendation::take(3)->get();
-
-//    return $peliculas;
      return view('Recommendations.recommendations', compact('peliculas'));
 
     }
