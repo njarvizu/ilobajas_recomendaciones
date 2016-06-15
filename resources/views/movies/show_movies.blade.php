@@ -58,7 +58,8 @@
                 else {
                     return 'label label-success';
                 }
-            }
+            },
+            //readonly: true
         }
     );
 

@@ -15,6 +15,11 @@ use App\download_queue;
 
 class MoviesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function show_movies()
     {
         // return Movie::with('ratings')->get();

@@ -6,7 +6,11 @@
     use App\download_queue;
 
     class DescargasController extends Controller {
-
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
+        
         public function historial_descargas($id = null, $action = null) {
 
             if($id != null AND $action == 1) {
