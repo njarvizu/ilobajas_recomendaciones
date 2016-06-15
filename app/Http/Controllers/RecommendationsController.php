@@ -10,15 +10,18 @@ use App\Recommendation;
 
 class RecommendationsController extends Controller {
 
-
-
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function show(){
 
-    $peliculas = Recommendation::take(3)->get();
+        $peliculas = Recommendation::take(3)->get();
 
-//    return $peliculas;
-     return view('Recommendations.recommendations', compact('peliculas'));
+        //    return $peliculas;
+        return view('Recommendations.recommendations', compact('peliculas'));
 
     }
 }
